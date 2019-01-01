@@ -19,5 +19,8 @@ namespace SimpleBlog.Models
 
         [Required]
         public string UserName { get; set; }
+
+        [Required]
+        public string UserIdentity { get; set; }
     }
 }
