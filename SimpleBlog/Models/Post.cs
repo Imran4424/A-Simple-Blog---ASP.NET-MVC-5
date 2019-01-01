@@ -16,5 +16,8 @@ namespace SimpleBlog.Models
 
         [Required]
         public string Body { get; set; }
+
+        [Required]
+        public string UserName { get; set; }
     }
 }
