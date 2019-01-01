@@ -18,6 +18,9 @@ namespace SimpleBlog.Models
         public string Body { get; set; }
 
         [Required]
+        public DateTime PostDate { get; set; }
+
+        [Required]
         public string UserName { get; set; }
 
         [Required]
