@@ -26,6 +26,8 @@ namespace SimpleBlog.Controllers
         // GET: Post / Index 
         public ActionResult Index()
         {
+            var posts = _context.Posts.ToList();
+
             return View();
         }
     }
