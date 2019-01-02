@@ -30,5 +30,15 @@ namespace SimpleBlog.Controllers
 
             return View(posts);
         }
+
+        
+        // GET: Post / Details
+        
+        public ActionResult Details(int id)
+        {
+            var post = _context.Posts.SingleOrDefault(p => p.Id == id);
+
+            return View(post);
+        }
     }
 }
