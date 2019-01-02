@@ -109,3 +109,4 @@ E:\WARRIOR\WEB\ASP.NET MVC 5\SimpleBlog\SimpleBlog\obj\Debug\SimpleBlog.dll
 E:\WARRIOR\WEB\ASP.NET MVC 5\SimpleBlog\SimpleBlog\obj\Debug\SimpleBlog.pdb
 E:\WARRIOR\WEB\ASP.NET MVC 5\SimpleBlog\SimpleBlog\obj\Debug\SimpleBlog.Migrations.InitialModel.resources
 E:\WARRIOR\WEB\ASP.NET MVC 5\SimpleBlog\SimpleBlog\obj\Debug\SimpleBlog.csproj.GenerateResource.cache
+E:\WARRIOR\WEB\ASP.NET MVC 5\SimpleBlog\SimpleBlog\obj\Debug\SimpleBlog.Migrations.AddingDataToUser.resources
