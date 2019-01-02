@@ -53,7 +53,12 @@ namespace SimpleBlog.Controllers
         [HttpPost]
         public ActionResult Save(Post post)
         {
+            post.UserIdentity = User.Identity.GetUserId();
+            post.UserName = User.Identity.Name;
+            post.PostDate = DateTime.Now;
 
+            _context.Posts.Add(post);
+            _context.SaveChanges();
 
             return RedirectToAction("Index", "Post");
         }
