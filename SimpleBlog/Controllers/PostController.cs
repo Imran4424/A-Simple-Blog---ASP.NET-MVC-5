@@ -40,5 +40,12 @@ namespace SimpleBlog.Controllers
 
             return View(post);
         }
+
+        // GET: Post / New
+
+        public ActionResult New()
+        {
+            return View();
+        }
     }
 }
