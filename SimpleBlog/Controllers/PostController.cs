@@ -45,9 +45,9 @@ namespace SimpleBlog.Controllers
 
         public ActionResult New()
         {
+            var newPost = new Post();
 
-
-            return View();
+            return View("PostForm", newPost);
         }
     }
 }
