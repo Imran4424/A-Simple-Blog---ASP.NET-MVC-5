@@ -1,8 +1,23 @@
-﻿
+﻿@model SimpleBlog.Models.Post
+
 @{
-    ViewBag.Title = "PostForm";
+    ViewBag.Title = " New Post";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>PostForm</h2>
+@using (Html.BeginForm("Save", "Post"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Title);
+        @Html.TextBoxFor(m => m.Title, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Body);
+        @Html.TextBoxFor(m => m.Body, new { @class = "form-control" })
+    </div>
+
+    @Html.HiddenFor(m => m.Id)
+    <button type="submit" class="btn btn-primary"> Save </button>
+}
 
