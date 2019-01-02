@@ -1,9 +1,14 @@
-﻿
+﻿@model SimpleBlog.Models.Post
 
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<div class="jumbotron">
+    <h1> @Model.Title </h1>
+    <p class="lead"> @Model.UserName</p>
+    <p> @Model.PostDate</p>
+    
+</div>
 
