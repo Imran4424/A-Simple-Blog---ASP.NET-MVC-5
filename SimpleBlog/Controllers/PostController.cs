@@ -23,7 +23,7 @@ namespace SimpleBlog.Controllers
             _context.Dispose();
         }
 
-        // GET: Controller / Index 
+        // GET: Post / Index 
         public ActionResult Index()
         {
             return View();
