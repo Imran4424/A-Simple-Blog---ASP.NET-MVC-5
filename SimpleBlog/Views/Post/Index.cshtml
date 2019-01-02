@@ -11,3 +11,30 @@
 <p>
     @Html.ActionLink("New Post", "New", "Post", null, new { @class = "btn btn-primary" })
 </p>
+
+
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th> Title </th>
+            <th> User </th>
+            <th> Date </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var post in Model)
+        {
+            <tr>
+                <td> @Html.ActionLink(post.Title, "Details", "Post", new { post.Id }, null)</td>
+
+
+                <td>
+                    
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
