@@ -30,9 +30,10 @@
                 <td> @Html.ActionLink(post.Title, "Details", "Post", new { post.Id }, null)</td>
 
 
-                <td>
-                    
-                </td>
+                <td> @post.UserName </td>
+
+                <td> @post.PostDate </td>
+
             </tr>
 
         }
