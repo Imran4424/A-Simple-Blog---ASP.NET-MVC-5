@@ -49,5 +49,12 @@ namespace SimpleBlog.Controllers
 
             return View("PostForm", newPost);
         }
+
+        [HttpPost]
+        public ActionResult Save(Post post)
+        {
+            return RedirectToAction("Index", "Post");
+        }
+
     }
 }
