@@ -53,6 +53,8 @@ namespace SimpleBlog.Controllers
         [HttpPost]
         public ActionResult Save(Post post)
         {
+
+
             return RedirectToAction("Index", "Post");
         }
 
