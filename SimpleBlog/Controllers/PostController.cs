@@ -28,7 +28,7 @@ namespace SimpleBlog.Controllers
         {
             var posts = _context.Posts.ToList();
 
-            return View();
+            return View(posts);
         }
     }
 }
