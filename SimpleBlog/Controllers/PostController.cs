@@ -63,5 +63,20 @@ namespace SimpleBlog.Controllers
             return RedirectToAction("Index", "Post");
         }
 
+
+        // GET: Post / Edit
+
+        public ActionResult Edit(int id)
+        {
+            var post = _context.Posts.SingleOrDefault(p => p.Id == id);
+
+            return View("UpdateForm", post);
+        }
+
+        [HttpPost]
+        public ActionResult Update(Post post)
+        {
+
+        }
     }
 }
