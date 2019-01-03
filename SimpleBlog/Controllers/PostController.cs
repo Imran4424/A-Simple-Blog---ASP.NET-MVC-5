@@ -78,7 +78,13 @@ namespace SimpleBlog.Controllers
         {
             var postInDb = _context.Posts.Single(c => c.Id == post.Id);
 
+            postInDb.Title = post.Title;
+            postInDb.Body = post.Body;
 
+            _context.SaveChanges();
+
+
+            return RedirectToAction("Details", "Post", postInDb);
         }
     }
 }
