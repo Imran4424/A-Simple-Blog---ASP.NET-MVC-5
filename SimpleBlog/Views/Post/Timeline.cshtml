@@ -1,12 +1,13 @@
 ﻿@model IEnumerable<SimpleBlog.Models.Post>
 
 
+
 @{
     ViewBag.Title = " Home ";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2> Posts </h2>
+<h2> Timeline </h2>
 
 <p>
     @Html.ActionLink("New Post", "New", "Post", null, new { @class = "btn btn-primary" })
@@ -34,6 +35,11 @@
                 <td> @post.UserName </td>
 
                 <td> @post.PostDate </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", "Post", new { post.Id }, null)
+                    @Html.ActionLink("Delete", "Delete", "Post", new { post.Id }, null)
+                </td>
 
             </tr>
 

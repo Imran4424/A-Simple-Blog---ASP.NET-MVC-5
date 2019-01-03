@@ -98,5 +98,17 @@ namespace SimpleBlog.Controllers
 
             return View(posts);
         }
+
+        // GET: Post / Delete
+
+        public ActionResult Delete(int id)
+        {
+            var post = _context.Posts.SingleOrDefault(p => p.Id == id);
+
+            _context.Posts.Remove(post);
+            _context.SaveChanges();
+
+            return RedirectToAction("Timeline", "Post");
+        }
     }
 }
