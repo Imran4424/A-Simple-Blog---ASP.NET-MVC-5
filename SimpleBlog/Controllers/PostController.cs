@@ -76,6 +76,8 @@ namespace SimpleBlog.Controllers
         [HttpPost]
         public ActionResult Update(Post post)
         {
+            var postInDb = _context.Posts.Single(c => c.Id == post.Id);
+
 
         }
     }
