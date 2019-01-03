@@ -14,7 +14,7 @@
 
     <div class="form-group">
         @Html.LabelFor(m => m.Body);
-        @Html.TextBoxFor(m => m.Body, new { @class = "blogbody" })
+        @Html.TextAreaFor(m => m.Body, new { @class = "form-control" })
     </div>
 
     @Html.HiddenFor(m => m.Id)

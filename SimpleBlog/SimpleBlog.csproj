@@ -188,6 +188,10 @@
     <Compile Include="Migrations\201901020021128_AddingDataToUser.Designer.cs">
       <DependentUpon>201901020021128_AddingDataToUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901030436528_ChangingPost.cs" />
+    <Compile Include="Migrations\201901030436528_ChangingPost.Designer.cs">
+      <DependentUpon>201901030436528_ChangingPost.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -280,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901020021128_AddingDataToUser.resx">
       <DependentUpon>201901020021128_AddingDataToUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901030436528_ChangingPost.resx">
+      <DependentUpon>201901030436528_ChangingPost.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

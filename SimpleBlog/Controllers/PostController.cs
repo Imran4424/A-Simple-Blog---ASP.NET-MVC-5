@@ -53,8 +53,12 @@ namespace SimpleBlog.Controllers
         [HttpPost]
         public ActionResult Save(Post post)
         {
+            string currentUserId = User.Identity.GetUserId();
+
+            var currentUserInfo = _context.Users.SingleOrDefault(u => u.Id == currentUserId);
+       
             post.UserIdentity = User.Identity.GetUserId();
-            post.UserName = User.Identity.Name;
+            post.PostedBy = currentUserInfo.Name;
             post.PostDate = DateTime.Now;
 
             _context.Posts.Add(post);

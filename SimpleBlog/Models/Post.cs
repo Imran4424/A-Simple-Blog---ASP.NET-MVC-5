@@ -21,7 +21,7 @@ namespace SimpleBlog.Models
         public DateTime PostDate { get; set; }
 
         [Required]
-        public string UserName { get; set; }
+        public string PostedBy { get; set; }
 
         [Required]
         public string UserIdentity { get; set; }
