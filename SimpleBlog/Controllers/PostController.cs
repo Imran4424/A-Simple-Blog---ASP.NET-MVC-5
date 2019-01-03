@@ -60,7 +60,7 @@ namespace SimpleBlog.Controllers
             _context.Posts.Add(post);
             _context.SaveChanges();
 
-            return RedirectToAction("Details", "Post");
+            return RedirectToAction("Details", "Post", post);
         }
 
 
