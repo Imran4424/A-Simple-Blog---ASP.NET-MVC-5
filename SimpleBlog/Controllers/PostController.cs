@@ -86,5 +86,13 @@ namespace SimpleBlog.Controllers
 
             return RedirectToAction("Details", "Post", postInDb);
         }
+
+
+        // GET: Post / Edit
+
+        public ActionResult Timeline()
+        {
+            string currentUserId = User.Identity.GetUserId();
+        }
     }
 }
