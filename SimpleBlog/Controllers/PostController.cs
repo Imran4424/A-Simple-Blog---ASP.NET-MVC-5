@@ -93,6 +93,10 @@ namespace SimpleBlog.Controllers
         public ActionResult Timeline()
         {
             string currentUserId = User.Identity.GetUserId();
+
+            var posts = _context.Posts.Where(p => p.UserIdentity == currentUserId).ToList();
+
+            return View(posts);
         }
     }
 }
