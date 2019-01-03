@@ -1,0 +1,42 @@
+﻿@model IEnumerable<SimpleBlog.Models.Post>
+
+
+@{
+    ViewBag.Title = " Home ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2> Posts </h2>
+
+<p>
+    @Html.ActionLink("New Post", "New", "Post", null, new { @class = "btn btn-primary" })
+</p>
+
+
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th> Title </th>
+            <th> User </th>
+            <th> Date </th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var post in Model)
+        {
+            <tr>
+                <td> @Html.ActionLink(post.Title, "Details", "Post", new { post.Id }, null)</td>
+
+
+                <td> @post.UserName </td>
+
+                <td> @post.PostDate </td>
+
+            </tr>
+
+        }
+    </tbody>
+</table>
