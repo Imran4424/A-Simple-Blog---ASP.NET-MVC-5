@@ -59,7 +59,7 @@ namespace SimpleBlog.Controllers
        
             post.UserIdentity = User.Identity.GetUserId();
             post.PostedBy = currentUserInfo.Name;
-            post.PostDate = DateTime.Now;
+            post.PostDate = DateTime.Today;
 
             _context.Posts.Add(post);
             _context.SaveChanges();
