@@ -111,3 +111,5 @@ E:\WARRIOR\WEB\ASP.NET MVC 5\SimpleBlog\SimpleBlog\obj\Debug\SimpleBlog.Migratio
 E:\WARRIOR\WEB\ASP.NET MVC 5\SimpleBlog\SimpleBlog\obj\Debug\SimpleBlog.csproj.GenerateResource.cache
 E:\WARRIOR\WEB\ASP.NET MVC 5\SimpleBlog\SimpleBlog\obj\Debug\SimpleBlog.Migrations.AddingDataToUser.resources
 E:\WARRIOR\WEB\ASP.NET MVC 5\SimpleBlog\SimpleBlog\obj\Debug\SimpleBlog.Migrations.ChangingPost.resources
+E:\WARRIOR\WEB\ASP.NET MVC 5\SimpleBlog\SimpleBlog\obj\Debug\SimpleBlog.Migrations.AddingComment.resources
+E:\WARRIOR\WEB\ASP.NET MVC 5\SimpleBlog\SimpleBlog\obj\Debug\SimpleBlog.Migrations.AddingPostIdToComment.resources

@@ -1,4 +1,4 @@
-﻿@model SimpleBlog.Models.Post
+﻿@model SimpleBlog.Models.PostViewModel
 
 @{
     ViewBag.Title = "Details";
@@ -6,9 +6,9 @@
 }
 
 <div class="jumbotron">
-    <h1> @Model.Title </h1>
-    <p class="lead"> @Model.PostedBy </p>
-    <p> @Model.PostDate</p>
+    <h1> @Model.Post.Title </h1>
+    <p class="lead"> @Model.Post.PostedBy </p>
+    <p> @Model.Post.PostDate</p>
     
 </div>
 
@@ -16,7 +16,35 @@
 
 <div class ="jumbotron">
 
-    <p class="lead"> @Model.Body </p>
+    <p class="lead"> @Model.Post.Body </p>
 
 </div>
+
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th> </th>
+            <th> </th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var comment in Model.Comments)
+        {
+            <tr>
+                <td> @comment.CommentBy </td>
+
+
+                <td> @comment.CommentDate </td>
+
+                <td> @comment.Data </td>
+
+            </tr>
+
+        }
+    </tbody>
+</table>
+
 

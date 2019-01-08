@@ -7,5 +7,8 @@ namespace SimpleBlog.Models
 {
     public class PostViewModel
     {
+        public Post Post { get; set; }
+
+        public IEnumerable<Comment> Comments { get; set; }
     }
 }

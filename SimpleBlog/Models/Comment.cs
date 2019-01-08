@@ -18,5 +18,8 @@ namespace SimpleBlog.Models
 
         [Required]
         public DateTime CommentDate { get; set; }
+
+        [Required]
+        public int PostId { get; set; }
     }
 }

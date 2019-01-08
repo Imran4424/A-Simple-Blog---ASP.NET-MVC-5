@@ -38,6 +38,8 @@ namespace SimpleBlog.Controllers
         {
             var post = _context.Posts.SingleOrDefault(p => p.Id == id);
 
+            var comments = _context.Comments.Where(c => c.PostId == id).ToList();
+
             return View(post);
         }
 

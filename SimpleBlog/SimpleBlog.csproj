@@ -192,8 +192,17 @@
     <Compile Include="Migrations\201901030436528_ChangingPost.Designer.cs">
       <DependentUpon>201901030436528_ChangingPost.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901080104473_AddingComment.cs" />
+    <Compile Include="Migrations\201901080104473_AddingComment.Designer.cs">
+      <DependentUpon>201901080104473_AddingComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901080153166_AddingPostIdToComment.cs" />
+    <Compile Include="Migrations\201901080153166_AddingPostIdToComment.Designer.cs">
+      <DependentUpon>201901080153166_AddingPostIdToComment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Post.cs" />
@@ -288,6 +297,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901030436528_ChangingPost.resx">
       <DependentUpon>201901030436528_ChangingPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901080104473_AddingComment.resx">
+      <DependentUpon>201901080104473_AddingComment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901080153166_AddingPostIdToComment.resx">
+      <DependentUpon>201901080153166_AddingPostIdToComment.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
