@@ -36,11 +36,16 @@ namespace SimpleBlog.Controllers
         
         public ActionResult Details(int id)
         {
-            var post = _context.Posts.SingleOrDefault(p => p.Id == id);
+            //var post = _context.Posts.SingleOrDefault(p => p.Id == id);
+            //var comments = _context.Comments.Where(c => c.PostId == id).ToList();
 
-            var comments = _context.Comments.Where(c => c.PostId == id).ToList();
+            var detailsModel = new PostViewModel
+            {
+                Post = _context.Posts.SingleOrDefault(p => p.Id == id),
+                Comments = _context.Comments.Where(c => c.PostId == id).ToList()
+        };
 
-            return View(post);
+            return View(detailsModel);
         }
 
         // GET: Post / New
