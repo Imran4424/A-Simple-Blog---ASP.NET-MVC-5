@@ -22,38 +22,38 @@
 
 
 @*<table class="table table-bordered table-hover">
-    <thead>
-        <tr>
-            <th> Comment </th>
-            <th>  Commeted by</th>
-            <th> Date </th>
-        </tr>
-    </thead>
-    <tbody>
-
-        @foreach (var comment in Model.Comments)
-        {
+        <thead>
             <tr>
-                <td> @comment.Data </td>
-
-
-                <td> @comment.CommentBy </td>
-
-                <td> @comment.CommentDate.ToString("d MMM yyyy") </td>
-
+                <th> Comment </th>
+                <th>  Commeted by</th>
+                <th> Date </th>
             </tr>
+        </thead>
+        <tbody>
 
-        }
-    </tbody>
-</table>*@
+            @foreach (var comment in Model.Comments)
+            {
+                <tr>
+                    <td> @comment.Data </td>
+
+
+                    <td> @comment.CommentBy </td>
+
+                    <td> @comment.CommentDate.ToString("d MMM yyyy") </td>
+
+                </tr>
+
+            }
+        </tbody>
+    </table>*@
 
 @foreach (var comment in Model.Comments)
 {
-    
-    <h4>  @comment.CommentBy  </h4> 
-    <h4>  @comment.CommentDate.ToString("d MMM yyyy") </h4> 
-    <h4> @comment.Data  </h4> 
 
+    <h4>  @comment.CommentBy  </h4>
+    <h4>  @comment.CommentDate.ToString("d MMM yyyy") </h4>
+    <h4> @comment.Data  </h4>
+    @Html.ActionLink("Delete", "DeleteComment", "Post", new { comment.Id }, null)
     <br />
     <br />
 
