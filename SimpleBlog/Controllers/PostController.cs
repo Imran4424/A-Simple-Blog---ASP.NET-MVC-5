@@ -80,7 +80,7 @@ namespace SimpleBlog.Controllers
             return RedirectToAction("Details", "Post", post);
         }
 
-        [HttpPost]
+        
         public ActionResult DeleteComment(int id)
         {
             var comment = _context.Comments.SingleOrDefault(c => c.Id == id);
