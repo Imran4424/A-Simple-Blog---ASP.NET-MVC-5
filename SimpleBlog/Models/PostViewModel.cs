@@ -10,5 +10,7 @@ namespace SimpleBlog.Models
         public Post Post { get; set; }
 
         public IEnumerable<Comment> Comments { get; set; }
+
+        public Comment NewComment { get; set; }
     }
 }

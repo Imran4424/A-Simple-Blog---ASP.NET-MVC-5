@@ -63,14 +63,16 @@ namespace SimpleBlog.Controllers
             string currentUserId = User.Identity.GetUserId();
 
             var currentUserInfo = _context.Users.SingleOrDefault(u => u.Id == currentUserId);
+
             comment.CommentBy = currentUserInfo.Name;
             comment.CommentDate = DateTime.Today;
             comment.PostId = post.Id;
 
+
             _context.Comments.Add(comment);
             _context.SaveChanges();
 
-            return RedirectToAction("Index", "Post");
+            return RedirectToAction("Details", "Post", post);
         }
 
         [HttpPost]

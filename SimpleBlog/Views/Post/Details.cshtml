@@ -8,7 +8,7 @@
 <div class="jumbotron">
     <h1> @Model.Post.Title </h1>
     <p class="lead"> @Model.Post.PostedBy </p>
-    <p> @Model.Post.PostDate</p>
+    <p> @Model.Post.PostDate.ToString("d MMM yyyy") </p>
 
 </div>
 
@@ -21,7 +21,7 @@
 </div>
 
 
-<table class="table table-bordered table-hover">
+@*<table class="table table-bordered table-hover">
     <thead>
         <tr>
             <th> Comment </th>
@@ -34,35 +34,44 @@
         @foreach (var comment in Model.Comments)
         {
             <tr>
+                <td> @comment.Data </td>
+
+
                 <td> @comment.CommentBy </td>
 
-
-                <td> @comment.CommentDate </td>
-
-                <td> @comment.Data </td>
+                <td> @comment.CommentDate.ToString("d MMM yyyy") </td>
 
             </tr>
 
         }
     </tbody>
-</table>
+</table>*@
 
-@using (Html.BeginForm("Comment", "Post"))
+@foreach (var comment in Model.Comments)
+{
+    
+    <h4>  @comment.CommentBy  </h4> 
+    <h4>  @comment.CommentDate.ToString("d MMM yyyy") </h4> 
+    <h4> @comment.Data  </h4> 
+
+    <br />
+    <br />
+
+}
+
+@using (Html.BeginForm("Comment", "Post", Model.Post))
 {
 
-    if(true)
-    {
-        var comment = Model.Comments;
 
-        <div class="form-group">
-            @Html.LabelFor(m => comment.Data);
-            @Html.TextAreaFor(m => comment.Data, new { @class = "form-control" })
-        </div>
+    var comment = Model.NewComment;
 
-        @Html.HiddenFor(m => comment.Id)
-        <button type="submit" class="btn btn-primary"> Comment </button>
-    }
+    <div class="form-group">
+        @Html.LabelFor(m => comment.Data);
+        @Html.TextAreaFor(m => comment.Data, new { @class = "form-control" })
+    </div>
 
+    @Html.HiddenFor(m => comment.Id)
+    <button type="submit" class="btn btn-primary"> Comment </button>
 }
 
 
