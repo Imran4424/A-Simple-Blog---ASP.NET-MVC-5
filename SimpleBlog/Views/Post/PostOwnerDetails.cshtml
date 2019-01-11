@@ -29,7 +29,7 @@
     <h4>  @comment.CommentBy  </h4>
     <h4>  @comment.CommentDate.ToString("d MMM yyyy") </h4>
     <h4> @comment.Data  </h4>
-
+    @Html.ActionLink("Delete", "DeleteComment", "Post", new { comment.Id }, new { Model.Post})
     <br />
     <br />
 

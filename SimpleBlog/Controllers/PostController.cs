@@ -43,7 +43,12 @@ namespace SimpleBlog.Controllers
             {
                 Post = _context.Posts.SingleOrDefault(p => p.Id == id),
                 Comments = _context.Comments.Where(c => c.PostId == id).ToList()
-        };
+            };
+
+            if (detailsModel.Post.UserIdentity == User.Identity.GetUserId())
+            {
+                return View("PostOwnerDetails",detailsModel);
+            }
 
             return View(detailsModel);
         }
@@ -74,6 +79,18 @@ namespace SimpleBlog.Controllers
 
             return RedirectToAction("Details", "Post", post);
         }
+
+        [HttpPost]
+        public ActionResult DeleteComment(int id, Post post)
+        {
+            var comment = _context.Comments.SingleOrDefault(c => c.Id == id);
+
+            _context.Comments.Remove(comment);
+            _context.SaveChanges();
+
+            return RedirectToAction("Details", "Post", post);
+        }
+
 
         [HttpPost]
         public ActionResult Save(Post post)
