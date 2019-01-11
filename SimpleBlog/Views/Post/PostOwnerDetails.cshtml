@@ -1,0 +1,53 @@
+﻿@model SimpleBlog.Models.PostViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="jumbotron">
+    <h1> @Model.Post.Title </h1>
+    <p class="lead"> @Model.Post.PostedBy </p>
+    <p> @Model.Post.PostDate.ToString("d MMM yyyy") </p>
+
+</div>
+
+<br />
+
+<div class="jumbotron">
+
+    <p class="lead"> @Model.Post.Body </p>
+
+</div>
+
+
+
+
+@foreach (var comment in Model.Comments)
+{
+
+    <h4>  @comment.CommentBy  </h4>
+    <h4>  @comment.CommentDate.ToString("d MMM yyyy") </h4>
+    <h4> @comment.Data  </h4>
+
+    <br />
+    <br />
+
+}
+
+@using (Html.BeginForm("Comment", "Post", Model.Post))
+{
+
+
+    var comment = Model.NewComment;
+
+    <div class="form-group">
+        @Html.LabelFor(m => comment.Data);
+        @Html.TextAreaFor(m => comment.Data, new { @class = "form-control" })
+    </div>
+
+    @Html.HiddenFor(m => comment.Id)
+    <button type="submit" class="btn btn-primary"> Comment </button>
+}
+
+

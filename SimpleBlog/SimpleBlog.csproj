@@ -271,6 +271,7 @@
     <Content Include="Views\Post\PostForm.cshtml" />
     <Content Include="Views\Post\UpdateForm.cshtml" />
     <Content Include="Views\Post\Timeline.cshtml" />
+    <Content Include="Views\Post\PostOwnerDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
