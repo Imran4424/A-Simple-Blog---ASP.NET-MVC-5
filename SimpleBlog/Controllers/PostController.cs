@@ -81,9 +81,13 @@ namespace SimpleBlog.Controllers
         }
 
         [HttpPost]
-        public ActionResult DeleteComment(int id, Post post)
+        public ActionResult DeleteComment(int id)
         {
             var comment = _context.Comments.SingleOrDefault(c => c.Id == id);
+
+            var postId = comment.PostId;
+
+            var post = _context.Posts.SingleOrDefault(p => p.Id == postId);
 
             _context.Comments.Remove(comment);
             _context.SaveChanges();
